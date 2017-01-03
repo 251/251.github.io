@@ -1,0 +1,195 @@
+body, html {
+	background-color: #eee;
+	color: #000;
+	font: 8pt Verdana, sans-serif;
+	line-height: 2em;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font: bold 1.5em Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 1px;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+hr {
+	background-color: #000;
+	border: 0;
+	color: #000;
+	height: 1px;
+	width: 10%;
+}
+
+table {
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+table, tr, th, td {
+	border: 1px solid black;
+}
+
+td {
+	padding: 3px 5px 3px 5px;
+}
+
+#main {
+	background: #fff url("/bilder/me.jpg") no-repeat bottom right;
+	border: 2px solid #c7cdd8;
+	color: #000;
+	margin: 60px 60px 0 60px;
+	padding: 30px;
+	text-align: justify;
+}
+
+#zitat {
+	font: bold 1em Georgia, "Times New Roman", Times, serif;
+	line-height: 2em;
+	margin-left: auto;
+	width: 22em;
+}
+
+#container {
+	margin-top: 30px;
+	min-height: 32em;
+}
+
+#menu {
+	float: left;
+	width: 12em;
+}
+
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu ul li {
+	margin: 0 0 6px 0;
+}
+
+#menu ul li a {
+	background-color: #eee;
+	border: 1px solid #c7cdd8;
+	color: #555;
+	display: block;
+	padding: 5px 0 2px 15px;
+	text-decoration: none;
+}
+
+#menu ul li a:hover {
+	background-color: #c7cdd8;
+	color: #fff;
+}
+
+.content {
+	border: 0;
+	margin-left: 12em;
+	padding-left: 60px;
+}
+
+.content pre {
+	background-color: #eee;
+	color: #000;
+	line-height: 1.5;
+	overflow: auto;
+	padding: 15px 15px 15px 15px;
+}
+
+.content blockquote {
+	border-left: 1px solid #c7cdd8;
+	margin: 30px 0 30px 60px;
+	padding-left: 15px;
+}
+
+.content ul {
+	list-style: none;
+	margin: 0 0 30px 15px;
+	padding: 0;
+}
+
+.content ul li a {
+	background-color: #fff;
+	color: #333;
+	text-decoration: none;
+
+}
+
+.content ul li a:hover {
+	background-color: #fff;
+	color: #aaa;
+}
+
+#author {
+	background-color: #eee;
+	color: #555;
+	text-align: center;
+}
+
+#author a {
+	background-color: #eee;
+	color: #333;
+	text-decoration: none;
+}
+
+.istop {
+	margin-top: 0;
+}
+
+.ablauf {
+	border: 2px solid #c7cdd8;
+	margin-top: 20px;
+	overflow: auto;
+	visibility: hidden;
+}
+
+.ablauf pre {
+	background-color: #fff;
+	margin: 0;
+}
+
+.ablauf pre b {
+	color: red;
+}
+
+.ablauf pre em {
+	color: blue;
+}
+
+.bild {
+	border: 2px solid #c7cdd8;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.bild img {
+	border: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+.borderfree {
+	border: 0;
+}
+
+.borderfree table, .borderfree tr, .borderfree td, .borderfree th {
+	border: 0;
+	padding: 0 0 0 3px;
+}
+
+.center {
+	text-align: center;
+}

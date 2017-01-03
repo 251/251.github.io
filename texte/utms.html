@@ -1,0 +1,1384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de"><head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Language" content="de" />
+<link rel="stylesheet" type="text/css" href="/css/basis.css" />
+
+<title>Franks Netzseite</title>
+
+</head><body>
+
+<div id="main">
+
+<div id="zitat">
+<q>Noch nie hat eine Religion, weder mittelbar noch unmittelbar, weder als Dogma noch als Gleichnis, eine Wahrheit enthalten.</q>
+</div>
+
+<h2>Willkommen auf meiner Netzseite</h2>
+
+<p>
+Wer auf diesen Seiten tiefschürfende Erkenntnisse, Weltverbesserungsvorschläge oder doch wieder nur Bilder siebenachtelnackter Kopulationszielpersonen sucht, der wird leider enttäuscht werden. Meine Seite ist momentan nur dazu da, mir einen Teil meiner Verweisliste virtuell hinterherzutragen. Nein, nicht wie Mutti früher die Stullenbüchse in die Schule zur Freude der gesamten Klasse, sondern viel cooler (Das sagte man früher so.).<br />
+Sollten Sie zufällig ähnliche <del>Männerhobbys</del> <ins>sinnvolle Interessen</ins> haben, sich zum Beispiel für Geschichte, Rechentechnik, Photographie, lange Sätze oder alte Kraftfahrzeuge interessieren, und hier den ein oder anderen Verweis finden, der dazu führt, daß Sie den Abend vor dem Rechner und nicht mit Ihrer besseren Hälfte verbringen, so tut es mir Leid. Natürlich war das alles überhaupt nicht so gewollt.
+</p>
+
+<div id="container">
+<div id="menu">
+	<ul>
+		<li class="istop"><a href="/index.html">Auswahl</a></li>
+		<li><a href="/verweise/buecher.html">Bücher</a></li>
+		<li><a href="/verweise/geschichte.html">Geschichte</a></li>
+		<li><a href="/verweise/kfz.html">Kraftfahrzeuge</a></li>
+		<li><a href="/verweise/software.html">Software</a></li>
+		<li><a href="/verweise/sonstiges.html">Sonstiges</a></li>
+		<li><a href="/verweise/studium.html">Studium</a></li>
+	</ul>
+</div>
+
+<div class="content">
+
+<h1>Universelle Turing-Maschinen</h1>
+<h2>Inhalt</h2>
+<ul>
+<li><a href="#einleitung">Einleitung</a></li>
+<li><a href="#utmhu">UTM von Hopcroft&amp;Ullman</a></li>
+<li><a href="#utmrp">UTM von Roger Penrose</a></li>
+<li><a href="#utmmm">UTM von Marvin Minsky</a></li>
+<li><a href="#literatur">Literatur</a></li>
+</ul>
+
+<h2><a name="einleitung">Einleitung</a></h2>
+<p>
+Die Geschichte der universellen Turing-Maschine beginnt im Jahre 1900, als David Hilbert in Paris seine 23 mathematischen Probleme vortrug [Hil00]. Diese Liste umfaßte die wichtigsten offenen Fragen der Mathematik dieser Zeit und war später die Grundlage des sogenannten &quot;Hilbertprogramms&quot;, der Suche nach einem vollständigen und widerspruchsfreien Axiomensystem, als Basis für Mathematik und Logik, um sämtliche mathematischen Sätze beweisen zu können. Zusammen mit Wilhelm Ackermann veröffentlichte Hilbert 1928 das Entscheidungsproblem [Hil28], also die Frage, ob es einen Algorithmus gibt, der in einer endlichen Anzahl von Schritten den Wahrheitsgehalt einer <abbr title="First Order Logic">FOL</abbr>-Formel bestimmen kann.
+</p>
+
+<p>
+1930/31 erschütterte Kurt Gödel [Goe31; Prop. 8, 11] mit seinem Unvollständigkeitssatz die Mathematiker um Hilbert. Er zeigte nämlich, daß jedes hinreichend mächtige formale System entweder widersprüchlich oder unvollständig und damit auch das hohe gesteckte Ziel des Hilbertprogramms nicht erreichbar ist. Dies führte dazu, daß das Entscheidungsproblem das Interesse vieler Mathematiker weckte, die sich dem Problem auf verschiedenen Wegen näherten.
+</p>
+
+<p>
+Kurz nach Alonzo Church [Chu36] zeigte auch Alan Mathison Turing [Tur36], daß das Entscheidungsproblem keine Lösung haben kann. Turing ging dabei einen recht ungewöhnlichen Weg. Er näherte seine Betrachtungen der mechanischen Abarbeitung einer Maschine an und führte das Entscheidungsproblem auf das Halteproblem zurück: &quot;Sei M eine Rechenmaschine (computing machine) und S eine Folge des Eingabealphabets. Gibt es eine Rechenmaschine, die entscheiden kann, ob M mit der Eingabe S hält?&quot;. Über einen Widerspruchsbeweis zeigte er dann die Unentscheidbarkeit dieses Problems. Turings "computing machines" gingen später als "Turing-Maschinen" in die Mathematikgeschichte ein.
+</p>
+
+<p>
+Ich möchte hier drei universelle Maschinen vorstellen, die nicht nur einfache Berechnungen durchführen, sondern beliebige Programme (Konfigurationen von Turing-Maschinen) und Eingaben einlesen können und daraufhin die Programmausgabe bzw. das Ergebnis berechnen. Turing selbst beschrieb in seiner Arbeit eine erste solche &quot;universal computing machine&quot;.
+</p>
+
+<h3>Weiterführende Verweise</h3>
+<ol style="list-style-type:lower-roman">
+<li><a href="http://de.wikipedia.org/wiki/Hilberts_Liste_von_23_mathematischen_Problemen">Hilberts Liste von 23 mathematischen Problemen</a></li>
+<li><a href="http://plato.stanford.edu/entries/hilbert-program/">Hilbert's Program</a></li>
+<li><a href="http://www.tu-harburg.de/rzt/rzt/it/goedel/goedel.html">Gödels Unvollständigkeitssatz</a></li>
+<li><a href="http://de.wikipedia.org/wiki/Halteproblem">Halteproblem</a></li>
+<li><a href="http://de.wikipedia.org/wiki/Church-Turing-These">Church-Turing-These</a></li>
+<li><a href="http://www.turing.org.uk/turing/index.html">The Alan Turing Home Page von A. Hodges</a></li>
+<li><a href="http://www.turingarchive.org/">Turing Digital Archive</a></li>
+<li><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Ackermann.html">Kurzbiographie: Wilhelm Ackermann (eng)</a></li>
+<li><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Church.html">Kurzbiographie: Alonzo Church (eng)</a></li>
+<li><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Godel.html">Kurzbiographie: Kurt Gödel (eng)</a></li>
+<li><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Hilbert.html">Kurzbiographie: David Hilbert (eng)</a></li>
+<li><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Turing.html">Kurzbiographie: Alan Turing (eng)</a></li>
+</ol>
+
+<h2><a name="utmhu">UTM von Hopcroft und Ullman</a></h2>
+<p>
+Das erste Beispiel ist die <abbr title="Universelle Turingmaschine">UTM</abbr> von Hopcroft&amp;Ullman [HU69] in einer von <a href="http://www.rdrop.com/~half/General/UTM/">Mark L. Irons</a> korrigierten Fassung.
+</p>
+
+<p>
+Als Beispiel für ein Eingabeprogramm dient jedesmal folgender Automat, wenn auch manchmal in leicht abgewandelter Form, der in einer Zeichenkette aus lauter Einsen jedes zweite Vorkommen durch eine Null ersetzt, bis er auf eine Null trifft:
+</p>
+
+<div class="bild">
+	<img src="../bilder/basisautomat1.png" alt="JFLAP-Darstellung des Basisautomaten"/>
+	Bild 1.1: JFLAP-Darstellung des Basisautomaten
+</div>
+
+<p>
+In tabellarischer Schreibweise (neuer Zustand, Kopfbewegung, geschriebenes Zeichen):
+</p>
+
+<table>
+	<tr><th>Zustand</th><th>&loz;</th><th>0</th><th>1</th></tr>
+	<tr><td>q0=1</td><td>reject</td><td>(1,R,0)</td><td>(2,R,1)</td></tr>
+	<tr><td>q1=2</td><td>reject</td><td>(4,R,0)</td><td>(3,R,0)</td></tr>
+	<tr><td>q2=3</td><td>reject</td><td>(4,R,0)</td><td>(2,R,1)</td></tr>
+	<tr><td>q3=4</td><td colspan="3">accept</td></tr>
+</table>
+
+<h3>Kodierung als Eingabe für die <abbr title="Universelle Turingmaschine">UTM</abbr></h3>
+
+<p>Die Kodierung für die <abbr title="Universelle Turingmaschine">UTM</abbr> erfolgt über folgende Regeln:</p>
+
+<ol>
+	<li>Die Transitionen des Finalzustandes (&quot;accept&quot;) werden mit dem Symbol &quot;0&quot; kodiert.</li>
+	<li>Die Transition &quot;reject&quot; wird mit dem Symbol &quot;0&quot; kodiert.</li>
+	<li>Alle anderen Transitionen werden kodiert, indem man den Folgezustand durch die entsprechende Anzahl Einsen ersetzt, ein &quot;R&quot; oder &quot;L&quot; anhängt und mit dem jeweiligen Schreibsymbol endet.</li>
+	<li>Jede Transition wird durch ein &quot;C&quot; eingeleitet. Transitionen werden von oben nach unten und von links nach rechts gelesen.</li>
+	<li>Zustände werden von einem &quot;C&quot; eingeleitet.</li>
+	<li>Dem ersten Zustand wird ein zusätzliches &quot;C&quot; vorangestellt.</li>
+	<li>Der Datenteil folgt unverzüglich der Maschinendefinition und wird von einem &quot;CCC&quot; eingeleitet. Er besteht aus einer Folge von Nullen und Einsen und wird durch ein &quot;&loz;&quot; beendet (&loz; (Blank) bei JFLAP autom. gegeben.).</li>
+</ol>
+
+<p>Wenn wir die Regeln auf unseren Basisautomaten anwenden, erhalten wir folgende Zeichenkette:</p>
+
+<pre>
+CCC0C1R0C11R1 CC0C1111R0C111R0 CC0C1111R0C11R1 CC0C0C0 CCC 1111110 &loz;
+|||         | |              | |             | |     |  |  |     | |
++--Zustand 1+ +---Zustand 2--+ +--Zustand 3--+ +-Z 4-+  |  +Daten+ |
+|||                                                     |          +- Datenende
+||+- Transitionsbeginn                                  +- Trennung zum Datenteil
+|+- neuer Zustand
++- erster Zustand
+</pre>
+
+<p>Wir wenden noch zwei Initialisierungsregeln an:</p>
+
+<ol>
+	<li>Ersetze das dritte &quot;C&quot; von links durch seine Markierung (=&quot;c&quot;).</li>
+	<li>Ersetze das erste Symbol des Datenbereichs durch seine Markierung (M(&quot;0&quot;)=&quot;o&quot;, M(&quot;1&quot;)=&quot;i&quot;, M(&quot;&loz;&quot;)=&quot;b&quot;).</li>
+</ol>
+
+<p>und vervollständigen damit unsere Eingabe für die universelle Turingmaschine:</p>
+
+<div class="center">
+CCc0C1R0C11R1CC0C1111R0C111R0CC0C1111R0C11R1CC0C0C0CCCi111110&loz;
+</div>
+
+
+<h3>Die <abbr title="Universelle Turingmaschine">UTM</abbr></h3>
+<p>Die Turingmaschine:</p>
+
+<div class="bild">
+	<img src="../bilder/utm_hopcroft_ullman.png" alt="JFLAP-Darstellung der UTM" />
+	Bild 1.2: Die universelle Turingmaschine nach Hopcroft und Ullman
+</div>
+
+<p>und die zugehörige Transitionstabelle:</p>
+
+<table>
+<tr>
+	<th>Z<sub>org</sub></th>
+	<th>Z<sub>neu</sub></th>
+	<th colspan="10">Eingabebandsymbole</th>
+</tr>
+
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td>1</td>
+<td>C</td>
+<td>L</td>
+<td>R</td>
+<td>b</td>
+<td>m<sub>0</sub></td>
+<td>m<sub>1</sub></td>
+<td>m<sub>C</sub></td>
+
+<td>m<sub>&loz;</sub></td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>0</td>
+<td>1</td>
+<td>C</td>
+<td>L</td>
+<td>R</td>
+<td>&loz;</td>
+<td>o</td>
+
+<td>i</td>
+<td>c</td>
+<td>b</td>
+</tr>
+<tr><td>A</td>
+<td>q0</td>
+<td>q0,0,R</td>
+<td>q0,1,R</td>
+<td>q0,C,R</td>
+
+<td>q0,L,R</td>
+<td>q0,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q1,c,R</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>B</td>
+<td>q1</td>
+<td>q1,0,R</td>
+
+<td>q1,1,R</td>
+<td>q1,C,R</td>
+<td>q1,L,R</td>
+<td>q1,R,R</td>
+<td>&nbsp;</td>
+<td>q3,o,L</td>
+<td>q4,i,L</td>
+<td>&nbsp;</td>
+<td>q2,b,L</td>
+</tr>
+
+<tr><td>C<sub>&loz;</sub></td>
+<td>q2</td>
+<td>q2,0,L</td>
+<td>q2,1,L</td>
+<td>q2,C,L</td>
+<td>q2,L,L</td>
+<td>q2,R,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q5,C,R</td>
+
+<td>&nbsp;</td>
+</tr>
+<tr><td>C<sub>0</sub></td>
+<td>q3</td>
+<td>q3,0,L</td>
+<td>q3,1,L</td>
+<td>q3,C,L</td>
+<td>q3,L,L</td>
+<td>q3,R,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+<td>q6,C,R</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>C<sub>1</sub></td>
+<td>q4</td>
+<td>q4,0,L</td>
+<td>q4,1,L</td>
+<td>q4,C,L</td>
+<td>q4,L,L</td>
+<td>q4,R,L</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q7,C,R</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>D<sub>&loz;</sub></td>
+<td>q5</td>
+<td>q31,0,L</td>
+<td>q8,i,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>D<sub>0</sub></td>
+<td>q6</td>
+<td>q6,0,R</td>
+<td>q6,1,R</td>
+<td>q5,C,R</td>
+<td>q6,L,R</td>
+
+<td>q6,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>D<sub>1</sub></td>
+<td>q7</td>
+<td>q7,0,R</td>
+<td>q7,1,R</td>
+<td>q6,C,R</td>
+
+<td>q7,L,R</td>
+<td>q7,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>E</td>
+<td>q8</td>
+<td>q8,0,L</td>
+<td>q8,1,L</td>
+
+<td>q9,C,L</td>
+<td>q8,L,L</td>
+<td>q8,R,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>F</td>
+<td>q9</td>
+<td>q8,0,L</td>
+
+<td>q8,1,L</td>
+<td>q10,C,L</td>
+<td>q8,L,L</td>
+<td>q8,R,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>G</td>
+<td>q10</td>
+
+<td>q8,0,L</td>
+<td>q8,1,L</td>
+<td>q11,C,R</td>
+<td>q8,L,L</td>
+<td>q8,R,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>H</td>
+
+<td>q11</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q12,C,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>I</td>
+<td>q12</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q13,c,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>J</td>
+<td>q13</td>
+<td>q13,0,R</td>
+
+<td>q13,1,R</td>
+<td>q13,C,R</td>
+<td>q13,L,R</td>
+<td>q13,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q14,1,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>K<sub>L</sub></td>
+<td>q14</td>
+
+<td>&nbsp;</td>
+<td>q15,i,L</td>
+<td>&nbsp;</td>
+<td>q24,L,R</td>
+<td>q25,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>M<sub>L</sub></td>
+<td>q15</td>
+
+<td>q15,0,L</td>
+<td>q15,1,L</td>
+<td>q15,C,L</td>
+<td>q15,L,L</td>
+<td>q15,R,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q16,C,R</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr><td>N<sub>L</sub></td>
+<td>q16</td>
+<td>q16,0,R</td>
+<td>q16,1,R</td>
+<td>q17,C,R</td>
+<td>q16,L,R</td>
+<td>q16,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q21,i,R</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>P<sub>L</sub></td>
+<td>q17</td>
+<td>q16,0,R</td>
+<td>q16,1,R</td>
+<td>q18,c,R</td>
+<td>q16,L,R</td>
+<td>q16,R,R</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+<td>q21,i,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>S<sub>L</sub></td>
+<td>q18</td>
+<td>q18,0,R</td>
+<td>q18,1,R</td>
+<td>q18,C,R</td>
+<td>q18,L,R</td>
+
+<td>q18,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q14,1,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>K<sub>R</sub></td>
+<td>q19</td>
+<td>&nbsp;</td>
+<td>q20,i,R</td>
+<td>&nbsp;</td>
+<td>q24,L,R</td>
+
+<td>q25,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>M<sub>R</sub></td>
+<td>q20</td>
+<td>q20,0,R</td>
+<td>q20,1,R</td>
+<td>q20,C,R</td>
+
+<td>q20,L,R</td>
+<td>q20,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q21,C,R</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>N<sub>R</sub></td>
+<td>q21</td>
+<td>q21,0,R</td>
+<td>q21,1,R</td>
+
+<td>q22,C,R</td>
+<td>q21,L,R</td>
+<td>q21,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>P<sub>R</sub></td>
+<td>q22</td>
+<td>q21,0,R</td>
+
+<td>q21,1,R</td>
+<td>q23,c,L</td>
+<td>q21,L,R</td>
+<td>q21,R,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>S<sub>R</sub></td>
+<td>q23</td>
+
+<td>q23,0,L</td>
+<td>q23,1,L</td>
+<td>q23,C,L</td>
+<td>q23,L,L</td>
+<td>q23,R,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q19,1,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr><td>T<sub>L</sub></td>
+<td>q24</td>
+<td>q26,0,R</td>
+<td>q27,1,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>T<sub>R</sub></td>
+
+<td>q25</td>
+<td>q28,0,R</td>
+<td>q29,1,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>T<sub>L-0</sub></td>
+<td>q26</td>
+
+<td>q26,0,R</td>
+<td>q26,1,R</td>
+<td>q26,C,R</td>
+<td>q26,L,R</td>
+<td>q26,R,R</td>
+<td>&nbsp;</td>
+<td>q30,0,L</td>
+<td>q30,0,L</td>
+<td>q26,c,R</td>
+
+<td>q30,0,L</td>
+</tr>
+<tr><td>T<sub>L-1</sub></td>
+<td>q27</td>
+<td>q27,0,R</td>
+<td>q27,1,R</td>
+<td>q27,C,R</td>
+<td>q27,L,R</td>
+<td>q27,R,R</td>
+<td>&nbsp;</td>
+
+<td>q30,1,L</td>
+<td>q30,1,L</td>
+<td>q27,c,R</td>
+<td>q30,1,L</td>
+</tr>
+<tr><td>T<sub>R-0</sub></td>
+<td>q28</td>
+<td>q28,0,R</td>
+<td>q28,1,R</td>
+<td>q28,C,R</td>
+
+<td>q28,L,R</td>
+<td>q28,R,R</td>
+<td>&nbsp;</td>
+<td>q30,0,R</td>
+<td>q30,0,R</td>
+<td>q28,c,R</td>
+<td>q30,0,R</td>
+</tr>
+<tr><td>T<sub>R-1</sub></td>
+<td>q29</td>
+
+<td>q29,0,R</td>
+<td>q29,1,R</td>
+<td>q29,C,R</td>
+<td>q29,L,R</td>
+<td>q29,R,R</td>
+<td>&nbsp;</td>
+<td>q30,1,R</td>
+<td>q30,1,R</td>
+<td>q29,c,R</td>
+
+<td>q30,1,R</td>
+</tr>
+<tr><td>U</td>
+<td>q30</td>
+<td>q3,o,L</td>
+<td>q4,i,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q2,b,L</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>V</td>
+<td>q31</td>
+<td>q31,0,L</td>
+<td>q31,1,L</td>
+<td>q32,C,L</td>
+<td>q31,L,L</td>
+<td>q31,R,L</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>W</td>
+<td>q32</td>
+<td>q31,0,L</td>
+<td>q31,1,L</td>
+<td>q33,C,R</td>
+<td>q31,L,L</td>
+
+<td>q31,R,L</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>X<sub>1</sub></td>
+<td>q33</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q34,C,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>X<sub>2</sub></td>
+<td>q34</td>
+<td>q35,0,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>X<sub>3</sub></td>
+<td>q35</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q36,C,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+<tr><td>X<sub>4</sub></td>
+<td>q36</td>
+<td>q37,0,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr><td>X<sub>5</sub></td>
+<td>q37</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>q38,C,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>X<sub>6</sub></td>
+<td>q38</td>
+
+<td>q39,0,R</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>Y</td>
+<td>q39</td>
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+<h3>Die Abarbeitung der Eingabe</h3>
+<p>
+Wenden wir die <abbr title="Universelle Turingmaschine">UTM</abbr> auf unsere Zeichenkette an, kann man die Arbeitsweise anhand der Kopfposition (rot) nachvollziehen. Die <abbr title="Universelle Turingmaschine">UTM</abbr> terminiert mit dem korrekten Ergebnis (blau).
+</p>
+
+<form action=""><div>
+	<input type="button" value="Ablauf einblenden" onclick="show('dateien/utm_hu_ablauf.html','ablauf_hu',this,'Ablauf');" /> (124kB)
+	<div class="ablauf" id="ablauf_hu"></div>
+</div></form>
+
+<p>Die zugehörige <a href="/dateien/jff/utm_hu.jff">JFLAP-Datei</a>.</p>
+
+<!-- 2. UTM nach Roger Penrose -->
+
+<h2><a name="utmrp">UTM von Roger Penrose</a></h2>
+<p>
+Die zweite <abbr title="Universelle Turingmaschine">UTM</abbr> ist dem Buch von Roger Penrose [Pen91] entnommen. Die Grundidee hierbei ist, daß jeder Turing-Maschine eine sogenannte Turingzahl zugeordnet werden kann.
+</p>
+
+<p>
+Als Beispiel dient wieder unser Automat, der in einer Zeichenkette aus lauter Einsen jedes zweite Vorkommen durch eine Null ersetzt, bis er auf eine Null trifft:
+</p>
+
+<div class="bild">
+	<img src="../bilder/basisautomat2.png" alt="JFLAP-Darstellung des Basisautomaten"/>
+	Bild 2.1: JFLAP-Darstellung des Basisautomaten
+</div>
+
+<h3>Kodierung als Eingabe für die <abbr title="Universelle Turingmaschine">UTM</abbr></h3>
+
+Die zugehörigen Transitionen mit den Zustandsnummern in Binärdarstellung:<br />
+(Zustandsnummer<sub>(2)</sub>)<b>(gelesenes Zeichen)</b> &rarr; (Zustandsnummer<sub>(2)</sub>)<b>(geschriebenes Zeichen)</b>(Kopfbewegung)
+
+<table>
+	<tr><td align="right">0<b>0</b></td><td>&rarr;</td><td align="right">0<b>0</b>R</td></tr>
+	<tr><td align="right">0<b>1</b></td><td>&rarr;</td><td align="right">1<b>1</b>R</td></tr>
+	<tr><td align="right">1<b>0</b></td><td>&rarr;</td><td align="right">11<b>0</b>S</td></tr>
+	<tr><td align="right">1<b>1</b></td><td>&rarr;</td><td align="right">10<b>0</b>R</td></tr>
+	<tr><td align="right">10<b>0</b></td><td>&rarr;</td><td align="right">11<b>0</b>S</td></tr>
+	<tr><td align="right">10<b>1</b></td><td>&rarr;</td><td align="right">1<b>1</b>R</td></tr>
+	<tr><td align="right">11<b>0</b></td><td>&rarr;</td><td align="right">11<b>0</b>S</td></tr>
+	<tr><td align="right">11<b>1</b></td><td>&rarr;</td><td align="right">11<b>1</b>S</td></tr>
+</table>
+
+<p>
+Die fortlaufende Numerierung auf der linken Seite kann weggelassen werden. Die rechte Seite ergibt von oben nach unten folgende Zeichenkette:
+</p>
+
+<div class="center">
+0<b>0</b>R1<b>1</b>R11<b>0</b>S10<b>0</b>R11<b>0</b>S1<b>1</b>R11<b>0</b>S11<b>1</b>S
+</div>
+
+<p>
+Jedes 0<b>0</b> kann weggelassen werden, 0<b>1</b> wird als <b>1</b> kodiert. Weiterhin gelten folgende Darstellungen:
+</p>
+
+<table>
+	<tr><td>0</td><td>für 0 oder <b>0</b></td></tr>
+	<tr><td>10</td><td>für 1 oder <b>1</b></td></tr>
+	<tr><td>110</td><td>für R</td></tr>
+	<tr><td>1110</td><td>für L</td></tr>
+	<tr><td>11110</td><td>für S</td></tr>
+</table>
+
+<p>Wir erhalten das Zwischenergebnis:</p>
+
+<div class="center">
+110 1010 110 10100 11110 1000 110 10100 11110 1010 110 10100 11110 101010 11110
+</div>
+
+<p>
+Ebenso wird angenommen, daß die Transition 0<b>0</b> &rarr; 0<b>0</b>R jedem Automaten immanent ist (0 fungiert hier ebenso als Blank; also gehe bis zum Wortanfang). Da jede Transition mit R, L oder S aufhört, kann die Folge &quot;110&quot; am Anfang und am Ende gestrichen werden. Die resultierende Zeichkette stellt dann die Turingzahl in Binärdarstellung dar:
+</p>
+
+<div class="center">
+m = 10101101010011110100011010100111101010110101001111010101011
+</div>
+
+<p>Bzw. in Dezimaldarstellung: m = 390258686802173611.</p>
+
+<h3>Die <abbr title="Universelle Turingmaschine">UTM</abbr></h3>
+
+<p>
+Eine solche Turingmaschine T<sub>m</sub> angewandt auf eine Zahl n ergibt eine Zahl p: T<sub>m</sub>(n)=p. Eine universelle Turingmaschine U nimmt als Eingaben die Zahlen m, n und berechnet daraus p: U(m,n)=p. Penrose gibt folgende universelle Turingmaschine an:
+</p>
+
+<pre>
+U = 724485533533931757719839503961571123795236067255655963110814479
+6606505059404241090310483613632359365644443458382226883278767626556
+1446928141177150178425517075540856576897533463569424784885970469347
+2573998858228382779529468346052106116983594593879188554632644092552
+5505820555989451890716537414896033096753020431553625034984529832320
+6515830476641421307088193297172341510569802627346864299218381721573
+3348282307345371342147505974034518437235959309064002432107734217885
+1492760797597634415123079586396354492269159479654614711345700145048
+1673375621725734645227310544829807849651269887889645697609066342044
+7798902191443793283001949357096392170390483327088259620130177372720
+2718625919914428275437422351355675134084222299889374410534305471044
+3686958764051781280194375308138706399427728231564252892375145654438
+9905278079324114482614235728619311833261065612275553181020751108533
+7633806031082361675045635852164214869542347187426437544428790062485
+8270912404220765387542644541334517485662915742999095026230097337381
+3772416217274772361020678685400289356608569682262014198248621698902
+6091309402985706001743006700868967590344734174127874255812015493663
+9389969058177385916540553567040928213322216314109787108145997866959
+9704509681841906299443656015145490488092208448003482249207730403043
+1884298993931352668823496621019471619107014619685231928474820344958
+9770955356110702758174873332729667899879847328409819076485127263100
+1740166787363477605857245036964434897992034489997455662402937487668
+8397514044516657077500605138839916688140725455446652220507242623923
+7921152531816251253630509317286314220040645713052758023076651833519
+95689139748137504926429605010013651980186945639498
+</pre>
+
+<p>Die Dekodierung führt zu folgender Transitionstabelle<sup>1</sup>:</p>
+
+<form id="penrose_transitionen" action=""><div>
+	<input type="button" value="Transitionstabelle einblenden" onclick="show('dateien/utm_penrose_transitionen.html','transitionen_penrose',this,'Transitionstabelle');" /> (44kB)
+	<div id="transitionen_penrose" style="margin: 20px;"></div>
+</div></form>
+
+<p>
+Als Trennung zwischen eingegebener Turingmaschinenzahl m und dem Argument n dient die Folge &quot;111110&quot;, außerdem wird von ungeraden n die letzte &quot;1&quot; gestrichen und jedes n mit &quot;1&quot; abgeschlossen. Wir erhalten für n=1111110 die <abbr title="Universelle Turingmaschine">UTM</abbr>-Eingabe:
+</p>
+
+<div class="center">
+10101101010011110100011010100111101010110101001111010101011 111110 1111110 1<sup>2</sup>
+</div>
+
+<hr align="left" />
+<p><sup>1</sup> Die Transitionstabelle für JFLAP wurde um einen Zustand &quot;201&quot;
+erweitert, der den Endzustand darstellt, da JFLAP mit finalem 0-Zustand keinen Schritt auf dem Band macht.</p>
+
+<p><sup>2</sup> JFLAP muss links und rechts genügend &quot;Reservenullen&quot; als
+Eingabe erhalten, da die Null ebenfalls als Blank fungiert. Benutzen Sie daher die
+erste Zeile der Ausgabe als Eingabe.</p>
+
+<h3>Die Abarbeitung der Eingabe</h3>
+
+<p>
+Auch bei dieser Abarbeitung ist die Kopfposition der <abbr title="Turing-Maschine">TM</abbr> wieder rot und das Ergebnis blau dargestellt.
+</p>
+
+<form id="penrose_ablauf" action=""><div>
+	<input type="button" value="Ablauf einblenden" onclick="show('dateien/utm_penrose_ablauf.html','ablauf_penrose',this,'Ablauf');" /> (1,3MB)
+	<input type="button" value="Grafik einblenden" onclick="show('dateien/utm_penrose_grafik.html','ablauf_penrose',this,'Grafik');" /> (64kB)
+	(Ja ich weiß, daß die Knöpfe nicht synchronisieren. ;))
+	<div class="ablauf" id="ablauf_penrose"></div>
+</div></form>
+
+<p>Die zugehörige <a href="/dateien/jff/utm_penrose.jff">JFLAP-Datei</a>.</p>
+
+<!-- 3. UTM -->
+
+<h2><a name="utmmm">UTM von Marvin Minsky</a></h2>
+
+<p>
+Die beiden letzten <abbr title="Universelle Turingmaschine">UTM</abbr>s zeichneten sich entweder durch ein großes Arbeitsalphabet oder durch eine große Anzahl von Zuständen aus. Marvin Minsky suchte Anfang der 60er Jahre eine Möglichkeit, eine universelle Turingmaschine mit kleinem Eingabealphabet und niedriger Zustandszahl zu konstruieren. 1962 veröffentlichte er seine Lösung ([Min62], auch beschrieben in [Min67]), eine (7,4)-<abbr title="Universelle Turingmaschine">UTM</abbr> mit sieben Zuständen und vier Symbolen. In den vergangenen Jahren folgten weitere Veröffentlichungen, ua. von Rogozhin (zB. [Rog96]) mit (2,24), (3,10), (4,7), (5,5), (6,4), (10,3) und (18,2) oder Baiocchi (zB. [Bai01]) mit (7,4), (10,3) und (19,2)-Varianten.
+</p>
+
+<p>
+<b>Aktualisierung:</b> Im Herbst 2007 ist es Alex Smith gelungen [Smi07], den Nachweis zu führen, daß eine von Stephen Wolfram gefundene Turingmaschine mit nur drei Farben und zwei Zuständen universell ist.
+</p>
+
+<p>
+Die gemeinsame Grundidee dieser Maschinen sind die sogen. Tag-Systeme. Ein Tag-System besteht aus einer Menge A = {a<sub>1</sub>,a<sub>2</sub>...a<sub>n</sub>} von Zeichen, dem Alphabet, und einer Menge W von Wörtern über A. Für jedes 1 &le; i &le; n gibt es ein solches Wort W<sub>i</sub> &isin; W, sofern es kein Haltesymbol ist. Weiterhin ist zu jedem Tag-System eine Eliminierungszahl P festgelegt.
+</p>
+
+<h3>Beispiel</h3>
+<p>Gegeben sei ein Tag-System mit P=2 und den Produktionen a<sub>i</sub> &rarr; W<sub>i</sub>:</p>
+
+<table>
+	<tr><td align="right">a<sub>1</sub></td><td>&rarr;</td><td align="left">a<sub>3</sub>a<sub>3</sub>a<sub>3</sub></td></tr>
+	<tr><td align="right">a<sub>2</sub></td><td>&rarr;</td><td align="left">a<sub>3</sub></td></tr>
+	<tr><td align="right">a<sub>3</sub></td><td>&rarr;</td><td align="left">halt</td></tr>
+</table>
+
+<p>
+Bei der Abarbeitung eines Startwortes s = a<sub>i</sub>a<sub>j</sub>W werden die ersten P Zeichen gelöscht und an das Wortende die rechte Seite der Produktion von a<sub>i</sub> &rarr; W<sub>i</sub> angehangen: s' = WW<sub>i</sub> für P=2. Dies wird wiederholt, bis das erste Zeichen ein Haltesymbol ist. Bei einem Startwort a<sub>1</sub>a<sub>2</sub>a<sub>2</sub> ergibt das für unser Beispiel: a<sub>1</sub>a<sub>2</sub>a<sub>2</sub> &rarr; a<sub>2</sub>a<sub>3</sub>a<sub>3</sub>a<sub>3</sub> &rarr; a<sub>3</sub>a<sub>3</sub>a<sub>3</sub>.
+</p>
+
+<h3>Turing-Maschine &rarr; Tag-System</h3>
+<p>
+Cocke und Minsky wiesen 1964 [CoMi64] die Universalität von Tag-Systemen mit P=2 nach. Wir werden uns daher auf P=2 beschränken und uns weiterhin an einer leicht abgewandelten Form von Minskys <abbr title="Universelle Turingmaschine">UTM</abbr> halten, die Raphael M. Robinson in [Rob91] beschrieben hat. Ebenfalls in dieser Arbeit ist ein Algorithmus zur Reduzierung einer n-Symbol-<abbr title="Turingmaschine">TM</abbr> zu einer 2-Symbol-<abbr title="Turingmaschine">TM</abbr> enthalten. Für unseren Beispielautomaten, der wieder jede zweite &quot;1&quot; in eine &quot;0&quot; umwandelt, bis er auf eine Null trifft, ist dies aber nicht notwendig.
+</p>
+
+<div class="bild">
+	<img src="../bilder/basisautomat3.png" alt="JFLAP-Darstellung des Basisautomaten"/>
+	Bild 3.1: JFLAP-Darstellung des Basisautomaten
+</div>
+
+<p>
+Wie funktioniert nun die Umwandlung unserer Turingmaschine in ein Tag-System? Zuerst benötigen wir eine Darstellung des Arbeitsbandes. Wir nehmen dazu an, der Kopf der Turingmaschine befindet sich über c<sub>0</sub> und die linke und rechte Seite des Bandes stellen nat. Zahlen in Binärdarstellung dar:
+</p>
+
+<pre>
+   &lt;---m---  --n--&gt;
+... c<sub>-3</sub>c<sub>-2</sub>c<sub>-1</sub><b>c<sub>0</sub></b>c<sub>1</sub>c<sub>2</sub>c<sub>3</sub> ...
+</pre>
+
+<p>mit</p>
+
+<table>
+	<tr><td align="center">j</td><td>=</td><td align="left">c<sub>0</sub></td></tr>
+	<tr><td align="center">m</td><td>=</td><td align="left">c<sub>-1</sub> + 2c<sub>-2</sub> + 4c<sub>-3</sub> + 8c<sub>-4 + ...</sub></td></tr>
+	<tr><td align="center">n</td><td>=</td><td align="left">c<sub>1</sub> + 2c<sub>2</sub> + 4c<sub>3</sub> + 8c<sub>4</sub> + ...</td></tr>
+</table>
+
+<p>
+Von der üblichen Quintupeldarstellung für Transitionen ausgehend (q<sub>i</sub>,s<sub>j</sub>,s<sub>k</sub>,D,q<sub>l</sub>) = (Ist-Zustand, gelesenes Zeichen, geschriebenes Zeichen, Kopfbewegung, Nachfolgezustand), können wir den Zustand unserer Turingmaschine jetzt als Quadrupel (i,j,m,n) beschreiben. Für unser Band wählen wir deshalb die Darstellung:
+</p>
+
+<div class="center">
+A<sub>ij</sub>A<sub>ij</sub>(a<sub>ij</sub>a<sub>ij</sub>)<sup>m</sup>B<sub>ij</sub>B<sub>ij</sub>(b<sub>ij</sub>b<sub>ij</sub>)<sup>n</sup>
+</div>
+
+<p>Um unsere Transitionen (q<sub>i</sub>,s<sub>j</sub>,s<sub>k</sub>,D,q<sub>l</sub>) in Produktionen
+umzuwandeln benutzen wir folgende Regeln:</p>
+
+<h3>1. Produktionen für (q<sub>i</sub>,s<sub>j</sub>,s<sub>k</sub>,R,q<sub>l</sub>)</h3>
+
+<table>
+	<tr><td align="left">A<sub>ij</sub></td><td>&rarr;</td><td align="left">C<sub>ij</sub>C<sub>ij</sub>(c<sub>ij</sub>c<sub>ij</sub>)<sup>k</sup></td></tr>
+	<tr><td align="left">a<sub>ij</sub></td><td>&rarr;</td><td align="left">(c<sub>ij</sub>c<sub>ij</sub>)<sup>2</sup></td></tr>
+	<tr><td align="left">B<sub>ij</sub></td><td>&rarr;</td><td align="left">D<sub>ij</sub></td></tr>
+	<tr><td align="left">b<sub>ij</sub></td><td>&rarr;</td><td align="left">d<sub>ij</sub></td></tr>
+</table>
+
+<h3>2. Produktionen für (q<sub>i</sub>,s<sub>j</sub>,s<sub>k</sub>,L,q<sub>l</sub>)</h3>
+
+<table>
+	<tr><td align="left">A<sub>ij</sub></td><td>&rarr;</td><td align="left">C<sub>ij</sub></td></tr>
+	<tr><td align="left">a<sub>ij</sub></td><td>&rarr;</td><td align="left">c<sub>ij</sub></td></tr>
+	<tr><td align="left">B<sub>ij</sub></td><td>&rarr;</td><td align="left">D<sub>ij</sub>D<sub>ij</sub>(d<sub>ij</sub>d<sub>ij</sub>)<sup>k</sup></td></tr>
+	<tr><td align="left">b<sub>ij</sub></td><td>&rarr;</td><td align="left">(d<sub>ij</sub>d<sub>ij</sub>)<sup>2</sup></td></tr>
+</table>
+
+<h3>3. Produktionen für beide Varianten</h3>
+
+<table>
+	<tr><td align="left">C<sub>ij</sub></td><td>&rarr;</td><td align="left">E<sub>l1</sub>E<sub>l0</sub></td></tr>
+	<tr><td align="left">c<sub>ij</sub></td><td>&rarr;</td><td align="left">e<sub>l1</sub>e<sub>l0</sub></td></tr>
+	<tr><td align="left">D<sub>ij</sub></td><td>&rarr;</td><td align="left">F<sub>l1</sub>F<sub>l0</sub></td></tr>
+	<tr><td align="left">d<sub>ij</sub></td><td>&rarr;</td><td align="left">f<sub>l1</sub>f<sub>l0</sub></td></tr>
+</table>
+
+<h3>4. Produktionen unabhängig von der Transition</h3>
+
+<table>
+	<tr><td align="left">E<sub>i0</sub></td><td>&rarr;</td><td align="left">A<sub>i0</sub>A<sub>i0</sub>A<sub>i0</sub></td></tr>
+	<tr><td align="left">E<sub>i1</sub></td><td>&rarr;</td><td align="left">A<sub>i1</sub>A<sub>i1</sub></td></tr>
+	<tr><td align="left">e<sub>ij</sub></td><td>&rarr;</td><td align="left">a<sub>ij</sub>a<sub>ij</sub></td></tr>
+	<tr><td align="left">F<sub>ij</sub></td><td>&rarr;</td><td align="left">B<sub>ij</sub>B<sub>ij</sub></td></tr>
+	<tr><td align="left">f<sub>ij</sub></td><td>&rarr;</td><td align="left">b<sub>ij</sub>b<sub>ij</sub></td></tr>
+</table>
+
+<p>
+Besitzt ein Zustand keine wegführenden Transitionen (im Beispiel q<sub>2</sub>), können wir die entspr. C<sub>ij</sub>, c<sub>ij</sub>, D<sub>ij</sub> und d<sub>ij</sub> aus unserem Alphabet streichen. Des Weiteren verlieren die jeweiligen A<sub>ij</sub>, a<sub>ij</sub> und b<sub>ij</sub> ihre Indizes, so daß A unser einziges Haltesymbol ist (a, b und B<sub>ij</sub> sind &quot;virtuelle Haltesymbole&quot;).
+</p>
+
+<p>Wenden wir die Regeln auf unseren Basisautomaten an, erhalten wir folgende Produktionen (A<sub>20</sub> = A<sub>21</sub> = A, a<sub>20</sub> = a<sub>21</sub> = a, b<sub>20</sub> = b<sub>21</sub> = b,
+doppelte Produktionen wurden weggelassen):</p>
+
+<table>
+<tr><td align="left"> A </td><td>&rarr;</td><td align="left"> halt </td></tr>
+<tr><td align="left"> A<sub>00</sub> </td><td>&rarr;</td><td align="left"> C<sub>00</sub>C<sub>00</sub> </td></tr>
+<tr><td align="left"> a<sub>00</sub> </td><td>&rarr;</td><td align="left"> c<sub>00</sub>c<sub>00</sub>c<sub>00</sub>c<sub>00</sub> </td></tr>
+<tr><td align="left"> B<sub>00</sub> </td><td>&rarr;</td><td align="left"> D<sub>00</sub> </td></tr>
+<tr><td align="left"> b<sub>00</sub> </td><td>&rarr;</td><td align="left"> d<sub>00</sub> </td></tr>
+<tr><td align="left"> C<sub>00</sub> </td><td>&rarr;</td><td align="left"> E<sub>21</sub>E<sub>20</sub> </td></tr>
+<tr><td align="left"> c<sub>00</sub> </td><td>&rarr;</td><td align="left"> e<sub>21</sub>e<sub>20</sub> </td></tr>
+<tr><td align="left"> D<sub>00</sub> </td><td>&rarr;</td><td align="left"> F<sub>21</sub>F<sub>20</sub> </td></tr>
+<tr><td align="left"> d<sub>00</sub> </td><td>&rarr;</td><td align="left"> f<sub>21</sub>f<sub>20</sub> </td></tr>
+<tr><td align="left"> E<sub>00</sub> </td><td>&rarr;</td><td align="left"> A<sub>00</sub>A<sub>00</sub>A<sub>00</sub> </td></tr>
+<tr><td align="left"> E<sub>01</sub> </td><td>&rarr;</td><td align="left"> A<sub>01</sub>A<sub>01</sub> </td></tr>
+<tr><td align="left"> e<sub>00</sub> </td><td>&rarr;</td><td align="left"> a<sub>00</sub>a<sub>00</sub> </td></tr>
+<tr><td align="left"> F<sub>00</sub> </td><td>&rarr;</td><td align="left"> B<sub>00</sub>B<sub>00</sub> </td></tr>
+<tr><td align="left"> f<sub>00</sub> </td><td>&rarr;</td><td align="left"> b<sub>00</sub>b<sub>00</sub> </td></tr>
+<tr><td align="left"> A<sub>01</sub> </td><td>&rarr;</td><td align="left"> C<sub>01</sub>C<sub>01</sub>c<sub>01</sub>c<sub>01</sub> </td></tr>
+<tr><td align="left"> a<sub>01</sub> </td><td>&rarr;</td><td align="left"> c<sub>01</sub>c<sub>01</sub>c<sub>01</sub>c<sub>01</sub> </td></tr>
+<tr><td align="left"> B<sub>01</sub> </td><td>&rarr;</td><td align="left"> D<sub>01</sub> </td></tr>
+<tr><td align="left"> b<sub>01</sub> </td><td>&rarr;</td><td align="left"> d<sub>01</sub> </td></tr>
+<tr><td align="left"> C<sub>01</sub> </td><td>&rarr;</td><td align="left"> E<sub>11</sub>E<sub>10</sub> </td></tr>
+<tr><td align="left"> c<sub>01</sub> </td><td>&rarr;</td><td align="left"> e<sub>11</sub>e<sub>10</sub> </td></tr>
+<tr><td align="left"> D<sub>01</sub> </td><td>&rarr;</td><td align="left"> F<sub>11</sub>F<sub>10</sub> </td></tr>
+<tr><td align="left"> d<sub>01</sub> </td><td>&rarr;</td><td align="left"> f<sub>11</sub>f<sub>10</sub> </td></tr>
+<tr><td align="left"> e<sub>01</sub> </td><td>&rarr;</td><td align="left"> a<sub>01</sub>a<sub>01</sub> </td></tr>
+<tr><td align="left"> F<sub>01</sub> </td><td>&rarr;</td><td align="left"> B<sub>01</sub>B<sub>01</sub> </td></tr>
+<tr><td align="left"> f<sub>01</sub> </td><td>&rarr;</td><td align="left"> b<sub>01</sub>b<sub>01</sub> </td></tr>
+<tr><td align="left"> A<sub>10</sub> </td><td>&rarr;</td><td align="left"> C<sub>10</sub>C<sub>10</sub> </td></tr>
+<tr><td align="left"> a<sub>10</sub> </td><td>&rarr;</td><td align="left"> c<sub>10</sub>c<sub>10</sub>c<sub>10</sub>c<sub>10</sub> </td></tr>
+<tr><td align="left"> B<sub>10</sub> </td><td>&rarr;</td><td align="left"> D<sub>10</sub> </td></tr>
+<tr><td align="left"> b<sub>10</sub> </td><td>&rarr;</td><td align="left"> d<sub>10</sub> </td></tr>
+<tr><td align="left"> C<sub>10</sub> </td><td>&rarr;</td><td align="left"> E<sub>21</sub>E<sub>20</sub> </td></tr>
+<tr><td align="left"> c<sub>10</sub> </td><td>&rarr;</td><td align="left"> e<sub>21</sub>e<sub>20</sub> </td></tr>
+<tr><td align="left"> D<sub>10</sub> </td><td>&rarr;</td><td align="left"> F<sub>21</sub>F<sub>20</sub> </td></tr>
+<tr><td align="left"> d<sub>10</sub> </td><td>&rarr;</td><td align="left"> f<sub>21</sub>f<sub>20</sub> </td></tr>
+<tr><td align="left"> E<sub>10</sub> </td><td>&rarr;</td><td align="left"> A<sub>10</sub>A<sub>10</sub>A<sub>10</sub> </td></tr>
+<tr><td align="left"> E<sub>11</sub> </td><td>&rarr;</td><td align="left"> A<sub>11</sub>A<sub>11</sub> </td></tr>
+<tr><td align="left"> e<sub>10</sub> </td><td>&rarr;</td><td align="left"> a<sub>10</sub>a<sub>10</sub> </td></tr>
+<tr><td align="left"> F<sub>10</sub> </td><td>&rarr;</td><td align="left"> B<sub>10</sub>B<sub>10</sub> </td></tr>
+<tr><td align="left"> f<sub>10</sub> </td><td>&rarr;</td><td align="left"> b<sub>10</sub>b<sub>10</sub> </td></tr>
+<tr><td align="left"> A<sub>11</sub> </td><td>&rarr;</td><td align="left"> C<sub>11</sub>C<sub>11</sub> </td></tr>
+<tr><td align="left"> a<sub>11</sub> </td><td>&rarr;</td><td align="left"> c<sub>11</sub>c<sub>11</sub>c<sub>11</sub>c<sub>11</sub> </td></tr>
+<tr><td align="left"> B<sub>11</sub> </td><td>&rarr;</td><td align="left"> D<sub>11</sub> </td></tr>
+<tr><td align="left"> b<sub>11</sub> </td><td>&rarr;</td><td align="left"> d<sub>11</sub> </td></tr>
+<tr><td align="left"> C<sub>11</sub> </td><td>&rarr;</td><td align="left"> E<sub>01</sub>E<sub>00</sub> </td></tr>
+<tr><td align="left"> c<sub>11</sub> </td><td>&rarr;</td><td align="left"> e<sub>01</sub>e<sub>00</sub> </td></tr>
+<tr><td align="left"> D<sub>11</sub> </td><td>&rarr;</td><td align="left"> F<sub>01</sub>F<sub>00</sub> </td></tr>
+<tr><td align="left"> d<sub>11</sub> </td><td>&rarr;</td><td align="left"> f<sub>01</sub>f<sub>00</sub> </td></tr>
+<tr><td align="left"> e<sub>11</sub> </td><td>&rarr;</td><td align="left"> a<sub>11</sub>a<sub>11</sub> </td></tr>
+<tr><td align="left"> F<sub>11</sub> </td><td>&rarr;</td><td align="left"> B<sub>11</sub>B<sub>11</sub> </td></tr>
+<tr><td align="left"> f<sub>11</sub> </td><td>&rarr;</td><td align="left"> b<sub>11</sub>b<sub>11</sub> </td></tr>
+<tr><td align="left"> E<sub>20</sub> </td><td>&rarr;</td><td align="left"> AAA </td></tr>
+<tr><td align="left"> E<sub>21</sub> </td><td>&rarr;</td><td align="left"> AA </td></tr>
+<tr><td align="left"> e<sub>20</sub> </td><td>&rarr;</td><td align="left"> aa </td></tr>
+<tr><td align="left"> F<sub>20</sub> </td><td>&rarr;</td><td align="left"> B<sub>20</sub>B<sub>20</sub> </td></tr>
+<tr><td align="left"> f<sub>20</sub> </td><td>&rarr;</td><td align="left"> bb </td></tr>
+<tr><td align="left"> e<sub>21</sub> </td><td>&rarr;</td><td align="left"> aa </td></tr>
+<tr><td align="left"> F<sub>21</sub> </td><td>&rarr;</td><td align="left"> B<sub>21</sub>B<sub>21</sub> </td></tr>
+<tr><td align="left"> f<sub>21</sub> </td><td>&rarr;</td><td align="left"> bb </td></tr>
+<tr><td align="left"> B<sub>20</sub> </td><td>&rarr;</td><td align="left"> halt </td></tr>
+<tr><td align="left"> B<sub>21</sub> </td><td>&rarr;</td><td align="left"> halt </td></tr>
+<tr><td align="left"> a </td><td>&rarr;</td><td align="left"> halt </td></tr>
+<tr><td align="left"> b </td><td>&rarr;</td><td align="left"> halt </td></tr>
+</table>
+
+<h3>Die Abarbeitung des Tag-Systems</h3>
+
+<p>
+Wir überprüfen die Abarbeitung des Tag-Systems. Als Startkonfiguration wählen wir die Zeichenkette &quot;1111&quot;, der Automat befindet sich im Zustand q<sub>0</sub> und liest die erste &quot;1&quot;. Alle anderen Felder des Eingabebandes sind mit &quot;0&quot; belegt. In unserer Tag-Darstellung mit der beschriebenen <abbr title="Turingmaschine">TM</abbr>-Abstraktion erhalten wir das Wort:
+</p>
+
+<pre>
+&lt;---m--- ---n---&gt;
+... 0000<b>1</b>1110000 ...
+</pre>
+
+<div class="center">
+A<sub>01</sub>A<sub>01</sub>B<sub>01</sub>B<sub>01</sub>(b<sub>01</sub>b<sub>01</sub>)<sup>7</sup>
+</div>
+
+<form id="minsky_ablauf" action=""><div>
+	<input type="button" value="Abarbeitung des Tagsystems einblenden" onclick="show('dateien/utm_minsky_ablauf.html','ablauf_minsky',this,'Abarbeitung des Tagsystems');" />
+	<div class="ablauf" id="ablauf_minsky"></div>
+</div></form>
+
+<p>Wir dekodieren das Ergebnis:</p>
+
+<div class="center">
+AAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaB<sub>20</sub>B<sub>20</sub> = A<sub>20</sub>A<sub>20</sub>(a<sub>20</sub>a<sub>20</sub>)<sup>20</sup>B<sub>20</sub>B<sub>20</sub><br />
+m = 20 = 10100<sub>(2)</sub>
+</div>
+
+<p>
+halten also im Zustand 2, über einer Null, mit dem Ergebnis: &quot;10100&quot;. Unser Tag-System verhält sich also genau wie unser Basisautomat.
+</p>
+
+<h3>Kodierung als Eingabe für die <abbr title="Universelle Turingmaschine">UTM</abbr></h3>
+
+<p>
+Um unser Tag-System als Eingabe für die <abbr title="Universelle Turingmaschine">UTM</abbr> aufzubereiten, gehen wir von einem Alphabet a<sub>0</sub>, a<sub>1</sub>, a<sub>2</sub> ... a<sub>p</sub> mit den zugehörigen Produktionen a<sub>i</sub> &rarr; a<sub>i1</sub>a<sub>i2</sub> ... a<sub>in<sub>i</sub></sub> aus<sup>1</sup>.
+</p>
+
+<p>Für jedes 0 &le; i &le; p definieren wir ein N<sub>i</sub> mit:</p>
+
+<div class="center">
+N<sub>i</sub> = (n<sub>0</sub> + 1) + (n<sub>1</sub> + 1) + ... + (n<sub>i-1</sub> + 1)
+</div>
+
+<p>wobei n<sub>i</sub> = 0, falls a<sub>i</sub> ein Haltesymbol ist.</p>
+
+<div class="center">N<sub>0</sub> = 0, N<sub>1</sub> = 1</div>
+
+<p>Die rechte Seite einer Produktion wird mit Hilfe der eben berechneten N<sub>i</sub> kodiert:</p>
+
+<div class="center">
+P<sub>i</sub> = 1 0<sup>N<sub>in<sub>i</sub></sub></sup> 01 ... 01 0<sup>N<sub>i2</sub></sup> 01 0<sup>N<sub>i1</sub></sup> 01
+</div>
+
+<p>und kann zusammen mit den anderen Produktionen auf dem Eingabeband dargestellt werden<sup>2</sup>:</p>
+
+<div class="center">
+... 0 0 1 P<sub>m</sub> ... P<sub>2</sub> P<sub>1</sub> 1 0 ... 0 S 0 0 ...
+</div>
+
+<p>Uns fehlt nur noch die Kodierung des Startwortes S = a<sub>r</sub>a<sub>s</sub> ... a<sub>z</sub>:</p>
+
+<div class="center">
+S = 2<sup>N<sub>r</sub></sup> 3 2<sup>N<sub>s</sub></sup> 3 ... 3 2<sup>N<sub>z</sub></sup>
+</div>
+
+<p>
+Beachten Sie, daß a<sub>0</sub>, das Haltesymbol, als leere Zeichenkette kodiert wird. Ein Tag-Wort a<sub>0</sub>a<sub>0</sub>a<sub>1</sub>a<sub>1</sub> würde also als &quot;33232&quot; dargestellt werden.
+</p>
+
+<p>
+Für unser Beispiel und folgender Numerierung ergeben sich dann die n<sub>i</sub>, N<sub>i</sub> und P<sub>i</sub>:
+</p>
+
+<table>
+<tr><td> i</td><td align="left">a<sub>i</sub></td><td>n<sub>i</sub></td><td>N<sub>i</sub></td><td>P<sub>i</sub></td></tr>
+<tr><td> 0</td><td align="left">A</td><td>0</td><td>  0</td><td>-</td></tr>
+<tr><td> 1</td><td align="left">A<sub>00</sub></td><td>2</td><td>  1</td><td>1 0<sup>13</sup> 01 0<sup>13</sup> 01</td></tr>
+<tr><td> 2</td><td align="left">a<sub>00</sub></td><td>4</td><td>  4</td><td>1 0<sup>16</sup> 01 0<sup>16</sup> 01 0<sup>16</sup> 01 0<sup>16</sup> 01</td></tr>
+<tr><td> 3</td><td align="left">B<sub>00</sub></td><td>1</td><td>  9</td><td>1 0<sup>19</sup> 01</td></tr>
+<tr><td> 4</td><td align="left">b<sub>00</sub></td><td>1</td><td> 11</td><td>1 0<sup>22</sup> 01</td></tr>
+<tr><td> 5</td><td align="left">C<sub>00</sub></td><td>2</td><td> 13</td><td>1 0<sup>149</sup> 01 0<sup>153</sup> 01</td></tr>
+<tr><td> 6</td><td align="left">c<sub>00</sub></td><td>2</td><td> 16</td><td>1 0<sup>156</sup> 01 0<sup>165</sup> 01</td></tr>
+<tr><td> 7</td><td align="left">D<sub>00</sub></td><td>2</td><td> 19</td><td>1 0<sup>159</sup> 01 0<sup>168</sup> 01</td></tr>
+<tr><td> 8</td><td align="left">d<sub>00</sub></td><td>2</td><td> 22</td><td>1 0<sup>162</sup> 01 0<sup>171</sup> 01</td></tr>
+<tr><td> 9</td><td align="left">E<sub>00</sub></td><td>3</td><td> 25</td><td>1 0<sup>1</sup> 01 0<sup>1</sup> 01 0<sup>1</sup> 01</td></tr>
+<tr><td>10</td><td align="left">E<sub>01</sub></td><td>2</td><td> 29</td><td>1 0<sup>41</sup> 01 0<sup>41</sup> 01</td></tr>
+<tr><td>11</td><td align="left">e<sub>00</sub></td><td>2</td><td> 32</td><td>1 0<sup>4</sup> 01 0<sup>4</sup> 01</td></tr>
+<tr><td>12</td><td align="left">F<sub>00</sub></td><td>2</td><td> 35</td><td>1 0<sup>9</sup> 01 0<sup>9</sup> 01</td></tr>
+<tr><td>13</td><td align="left">f<sub>00</sub></td><td>2</td><td> 38</td><td>1 0<sup>11</sup> 01 0<sup>11</sup> 01</td></tr>
+<tr><td>14</td><td align="left">A<sub>01</sub></td><td>4</td><td> 41</td><td>1 0<sup>58</sup> 01 0<sup>58</sup> 01 0<sup>55</sup> 01 0<sup>55</sup> 01</td></tr>
+<tr><td>15</td><td align="left">a<sub>01</sub></td><td>4</td><td> 46</td><td>1 0<sup>58</sup> 01 0<sup>58</sup> 01 0<sup>58</sup> 01 0<sup>58</sup> 01</td></tr>
+<tr><td>16</td><td align="left">B<sub>01</sub></td><td>1</td><td> 51</td><td>1 0<sup>61</sup> 01</td></tr>
+<tr><td>17</td><td align="left">b<sub>01</sub></td><td>1</td><td> 53</td><td>1 0<sup>64</sup> 01</td></tr>
+<tr><td>18</td><td align="left">C<sub>01</sub></td><td>2</td><td> 55</td><td>1 0<sup>100</sup> 01 0<sup>104</sup> 01</td></tr>
+<tr><td>19</td><td align="left">c<sub>01</sub></td><td>2</td><td> 58</td><td>1 0<sup>107</sup> 01 0<sup>140</sup> 01</td></tr>
+<tr><td>20</td><td align="left">D<sub>01</sub></td><td>2</td><td> 61</td><td>1 0<sup>110</sup> 01 0<sup>143</sup> 01</td></tr>
+<tr><td>21</td><td align="left">d<sub>01</sub></td><td>2</td><td> 64</td><td>1 0<sup>113</sup> 01 0<sup>146</sup> 01</td></tr>
+<tr><td>22</td><td align="left">e<sub>01</sub></td><td>2</td><td> 67</td><td>1 0<sup>46</sup> 01 0<sup>46</sup> 01</td></tr>
+<tr><td>23</td><td align="left">F<sub>01</sub></td><td>2</td><td> 70</td><td>1 0<sup>51</sup> 01 0<sup>51</sup> 01</td></tr>
+<tr><td>24</td><td align="left">f<sub>01</sub></td><td>2</td><td> 73</td><td>1 0<sup>53</sup> 01 0<sup>53</sup> 01</td></tr>
+<tr><td>25</td><td align="left">A<sub>10</sub></td><td>2</td><td> 76</td><td>1 0<sup>88</sup> 01 0<sup>88</sup> 01</td></tr>
+<tr><td>26</td><td align="left">a<sub>10</sub></td><td>4</td><td> 79</td><td>1 0<sup>91</sup> 01 0<sup>91</sup> 01 0<sup>91</sup> 01 0<sup>91</sup> 01</td></tr>
+<tr><td>27</td><td align="left">B<sub>10</sub></td><td>1</td><td> 84</td><td>1 0<sup>94</sup> 01</td></tr>
+<tr><td>28</td><td align="left">b<sub>10</sub></td><td>1</td><td> 86</td><td>1 0<sup>97</sup> 01</td></tr>
+<tr><td>29</td><td align="left">C<sub>10</sub></td><td>2</td><td> 88</td><td>1 0<sup>149</sup> 01 0<sup>153</sup> 01</td></tr>
+<tr><td>30</td><td align="left">c<sub>10</sub></td><td>2</td><td> 91</td><td>1 0<sup>156</sup> 01 0<sup>165</sup> 01</td></tr>
+<tr><td>31</td><td align="left">D<sub>10</sub></td><td>2</td><td> 94</td><td>1 0<sup>159</sup> 01 0<sup>168</sup> 01</td></tr>
+<tr><td>32</td><td align="left">d<sub>10</sub></td><td>2</td><td> 97</td><td>1 0<sup>162</sup> 01 0<sup>171</sup> 01</td></tr>
+<tr><td>33</td><td align="left">E<sub>10</sub></td><td>3</td><td>100</td><td>1 0<sup>76</sup> 01 0<sup>76</sup> 01 0<sup>76</sup> 01</td></tr>
+<tr><td>34</td><td align="left">E<sub>11</sub></td><td>2</td><td>104</td><td>1 0<sup>116</sup> 01 0<sup>116</sup> 01</td></tr>
+<tr><td>35</td><td align="left">e<sub>10</sub></td><td>2</td><td>107</td><td>1 0<sup>79</sup> 01 0<sup>79</sup> 01</td></tr>
+<tr><td>36</td><td align="left">F<sub>10</sub></td><td>2</td><td>110</td><td>1 0<sup>84</sup> 01 0<sup>84</sup> 01</td></tr>
+<tr><td>37</td><td align="left">f<sub>10</sub></td><td>2</td><td>113</td><td>1 0<sup>86</sup> 01 0<sup>86</sup> 01</td></tr>
+<tr><td>38</td><td align="left">A<sub>11</sub></td><td>2</td><td>116</td><td>1 0<sup>128</sup> 01 0<sup>128</sup> 01</td></tr>
+<tr><td>39</td><td align="left">a<sub>11</sub></td><td>4</td><td>119</td><td>1 0<sup>131</sup> 01 0<sup>131</sup> 01 0<sup>131</sup> 01 0<sup>131</sup> 01</td></tr>
+<tr><td>40</td><td align="left">B<sub>11</sub></td><td>1</td><td>124</td><td>1 0<sup>134</sup> 01</td></tr>
+<tr><td>41</td><td align="left">b<sub>11</sub></td><td>1</td><td>126</td><td>1 0<sup>137</sup> 01</td></tr>
+<tr><td>42</td><td align="left">C<sub>11</sub></td><td>2</td><td>128</td><td>1 0<sup>25</sup> 01 0<sup>29</sup> 01</td></tr>
+<tr><td>43</td><td align="left">c<sub>11</sub></td><td>2</td><td>131</td><td>1 0<sup>32</sup> 01 0<sup>67</sup> 01</td></tr>
+<tr><td>44</td><td align="left">D<sub>11</sub></td><td>2</td><td>134</td><td>1 0<sup>35</sup> 01 0<sup>70</sup> 01</td></tr>
+<tr><td>45</td><td align="left">d<sub>11</sub></td><td>2</td><td>137</td><td>1 0<sup>38</sup> 01 0<sup>73</sup> 01</td></tr>
+<tr><td>46</td><td align="left">e<sub>11</sub></td><td>2</td><td>140</td><td>1 0<sup>119</sup> 01 0<sup>119</sup> 01</td></tr>
+<tr><td>47</td><td align="left">F<sub>11</sub></td><td>2</td><td>143</td><td>1 0<sup>124</sup> 01 0<sup>124</sup> 01</td></tr>
+<tr><td>48</td><td align="left">f<sub>11</sub></td><td>2</td><td>146</td><td>1 0<sup>126</sup> 01 0<sup>126</sup> 01</td></tr>
+<tr><td>49</td><td align="left">E<sub>20</sub></td><td>3</td><td>149</td><td>1 0<sup>0</sup> 01 0<sup>0</sup> 01 0<sup>0</sup> 01</td></tr>
+<tr><td>50</td><td align="left">E<sub>21</sub></td><td>2</td><td>153</td><td>1 0<sup>0</sup> 01 0<sup>0</sup> 01</td></tr>
+<tr><td>51</td><td align="left">e<sub>20</sub></td><td>2</td><td>156</td><td>1 0<sup>176</sup> 01 0<sup>176</sup> 01</td></tr>
+<tr><td>52</td><td align="left">F<sub>20</sub></td><td>2</td><td>159</td><td>1 0<sup>174</sup> 01 0<sup>174</sup> 01</td></tr>
+<tr><td>53</td><td align="left">f<sub>20</sub></td><td>2</td><td>162</td><td>1 0<sup>177</sup> 01 0<sup>177</sup> 01</td></tr>
+<tr><td>54</td><td align="left">e<sub>21</sub></td><td>2</td><td>165</td><td>1 0<sup>176</sup> 01 0<sup>176</sup> 01</td></tr>
+<tr><td>55</td><td align="left">F<sub>21</sub></td><td>2</td><td>168</td><td>1 0<sup>175</sup> 01 0<sup>175</sup> 01</td></tr>
+<tr><td>56</td><td align="left">f<sub>21</sub></td><td>2</td><td>171</td><td>1 0<sup>177</sup> 01 0<sup>177</sup> 01</td></tr>
+<tr><td>57</td><td align="left">B<sub>20</sub></td><td>0</td><td>174</td><td>101</td></tr>
+<tr><td>58</td><td align="left">B<sub>21</sub></td><td>0</td><td>175</td><td>101</td></tr>
+<tr><td>59</td><td align="left">a</td><td>0</td><td>176</td><td>101</td></tr>
+<tr><td>60</td><td align="left">b</td><td>0</td><td>177</td><td>101</td></tr>
+</table>
+
+<p>und für die oben gewählte Startkonfiguration:</p>
+
+<div class="center">
+ S = 2<sup>41</sup> 3 2<sup>41</sup> 3 2<sup>51</sup> 3 2<sup>51</sup> (3 2<sup>53</sup> 3 2<sup>53</sup>)<sup>7</sup>
+</div>
+
+<hr align="left" />
+<p><sup>1</sup> Sollte nicht für jedes Symbol eine Produktion vorhanden sein, wird das entsprechende a<sub>i</sub> als &quot;virtuelles Haltesymbol&quot; definiert.</p>
+<p><sup>2</sup> Zwischen den P<sub>i</sub> uns S befindet sich mindestens eine Null. Der Exponent n meint immer die n-fache Wiederholung des Basissymbols.</p>
+
+<h3>Die <abbr title="Universelle Turingmaschine">UTM</abbr></h3>
+
+<p>
+Unsere universelle Turingmaschine besitzt 27 Transitionen. Die Tripel in den Zellen sind (s<sub>k</sub>,D,q<sub>l</sub>): zB. befinden wir uns im Zustand q<sub>2</sub>, lesen eine &quot;0&quot;, schreiben eine &quot;2&quot;, bewegen den Kopf nach links und gehen in den Zustand q<sub>4</sub> über.
+</p>
+
+<table>
+	<tr><td style="padding: 5px 20px 5px 20px;">Zustand</td><td style="padding: 5px 20px 5px 20px;">0</td><td style="padding: 5px 20px 5px 20px;">1</td><td style="padding: 5px 20px 5px 20px;">2</td><td style="padding: 5px 20px 5px 20px;">3</td></tr>
+	<tr><td>q<sub>0</sub></td><td>(2,R,0)</td><td>(3,R,0)</td><td>(0,L,1)</td><td>(2,L,4)</td></tr>
+	<tr><td>q<sub>1</sub></td><td>(0,L,1)</td><td>(3,R,0)</td><td>(0,L,1)</td><td>(1,L,1)</td></tr>
+	<tr><td>q<sub>2</sub></td><td>(2,L,4)</td><td>(3,R,2)</td><td>(2,R,2)</td><td>(1,R,2)</td></tr>
+	<tr><td>q<sub>3</sub></td><td>(3,L,4)</td><td>(3,R,3)</td><td>(2,R,3)</td><td>(1,R,3)</td></tr>
+	<tr><td>q<sub>4</sub></td><td>   -   </td><td>(3,L,4)</td><td>(2,L,4)</td><td>(1,L,5)</td></tr>
+	<tr><td>q<sub>5</sub></td><td>(2,R,2)</td><td>(1,L,6)</td><td>(2,L,5)</td><td>(1,L,5)</td></tr>
+	<tr><td>q<sub>6</sub></td><td>(2,R,3)</td><td>(1,R,6)</td><td>(0,R,6)</td><td>(0,R,0)</td></tr>
+</table>
+
+<h3>Die Abarbeitung</h3>
+
+<p>
+Die Abarbeitung beginnt die <abbr title="Universelle Turingmaschine">UTM</abbr> im Zustand q<sub>0</sub> über dem ersten Zeichen von S. Wir müssen den Automaten daher wieder an JFLAP anpassen und auch die Eingabe wieder mit genügend Reservenullen (&quot;0&quot; dient wieder als Blank) versehen. Wir empfehlen allerdings, in diesem Fall eine selbstgeschriebene kleine Turingmaschine mit geeigneten Datenstrukturen zu verwenden. Dies würde auch die Ergebnisdekodierung vereinfachen.
+</p>
+
+<p>
+Leider verbietet sich eine vernünftige Darstellung der Ausgabe. Der geneigte Leser möge sich den Speicherbedarf einer vierfarbigen {0,1,2,3} Grafik mit einer Breite von 41.714 Pixeln (Arbeitsband am Ende der Abarbeitung mit jeweils zwei Blanks links und rechts) und einer Höhe von 1.592.723.815 Pixeln (Anzahl der Iterationen), gegebenfalls mit geeigneter Komprimierung (die <abbr title="Universelle Turingmaschine">UTM</abbr> hierbei nicht vergessen ;)), überlegen.
+</p>
+
+<p>Wir beschränken uns daher auf den wesentlichen Teil:</p>
+
+<p>
+S<sub>erg</sub> = 2<sup>  0</sup> <em style="color: blue;">3</em>
+2<sup>  0</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>176</sup> 3
+2<sup>174</sup> 3
+2<sup>174</sup>
+</p>
+
+<h3>Ergebnisdekodierung</h3>
+<p>
+Leider hat die Maschine einen kleinen Schönheitsfehler. Die erste &quot;3&quot; (blau) wird immer durch eine &quot;2&quot; ersetzt. Vor dem Dekodieren muß man dies erst wieder rückgängig machen. In vereinfachter Schreibweise:
+</p>
+
+<div class="center">
+S<sub>erg</sub> = 2<sup>N<sub>0</sub></sup> 3 2<sup>N<sub>0</sub></sup> 3 (2<sup>N<sub>176</sub></sup> 3 2<sup>N<sub>176</sub></sup> 3)<sup>20</sup> 2<sup>N<sub>174</sub></sup> 3 2<sup>N<sub>174</sub></sup>
+</div>
+
+<p>und mit Hilfe der obigen Tabelle dekodiert:</p>
+
+<div class="center">
+S<sub>erg</sub> = AA(aa)<sup>20</sup>B<sub>20</sub>B<sub>20</sub>
+</div>
+
+<p>Wir erhalten also genau das erwartete und oben bereits hergeleitete Ergebnis.</p>
+
+<p>Die zugehörige <a href="/dateien/jff/utm_minsky.jff">JFLAP-Datei</a>.</p>
+
+
+<!-- Verweise -->
+
+<h3>Weiterführende Verweise</h3>
+<ol style="list-style-type:lower-roman">
+	<li>Brainfuck: <a href="http://www.hevanet.com/cristofd/brainfuck/utm.b">Nachweis der Turing-Vollständigkeit über eine Tag-System-<abbr title="Universelle Turingmaschine">UTM</abbr></a></li>
+	<li>Wolfram: <a href="http://www.wolframscience.com/nksonline/page-706">A New Kind Of Science: Universality in Turing Machines and Other Systems</a></li>
+	<li>Marvin Minsky: <a href="http://web.media.mit.edu/~minsky/">Netzseite</a></li>
+</ol>
+
+
+<!-- Literatur -->
+
+<h2><a name="literatur">Literatur</a></h2>
+<dl>
+	<dt>[Bai01]</dt>
+		<dd>Baiocchi, Claudio: Three Small Universal Turing Machines, LNCS 2055, 2001.</dd>
+	<dt>[Chu36]</dt>
+		<dd>Church, Alonzo: An unsolvable problem of elementary number theory. American Journal of Mathematics/58, 1936.</dd>
+	<dt>[CoMi64]</dt>
+		<dd>Cocke, John; Minsky, Marvin: Universality of Tag Systems With P=2, ACM Vol. 11, 1964.</dd>
+	<dt>[Goe31]</dt>
+		<dd>Gödel, Kurt: Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I, 1931.</dd>
+	<dt>[Hil00]</dt>
+		<dd>Hilbert, David: Mathematische Probleme: Vortrag zum Mathematiker-Kongreß zu Paris, 1900. (<a href="http://www.mathematik.uni-bielefeld.de/~kersten/hilbert/rede.html">Netzversion</a>)</dd>
+	<dt>[Hil28]</dt>
+		<dd>Hilbert, David; Ackerman, Wilhelm: Grundzüge der theoretischen Logik, 1928.</dd>
+	<dt>[HU69]</dt>
+		<dd>Hopcroft, Ullman: Formal Languages and Their Relation to Automata, 1969.</dd>
+	<dt>[Min62]</dt>
+		<dd>Minsky, Marvin: Size and structure of universal Turing machines using tag systems, Proceedings of Symposia in Pure Mathematics, Vol. 5, AMS, 1962.</dd>
+	<dt>[Min67]</dt>
+		<dd>Minsky, Marvin: Computation: Finite And Infinite Machines, Prentice Hall, 1967.</dd>
+	<dt>[Pen91]</dt>
+		<dd>Penrose, Roger: Computerdenken, Spektrum der Wissenschaft Verlagsgesellschaft, Heidelberg 1991.</dd>
+	<dt>[Rob91]</dt>
+		<dd>Robinson, Raphael M.: Minsky's Small Universal Turing Machine, IJM Vol. 2 No. 5, 1991.</dd>
+	<dt>[Rog96]</dt>
+		<dd>Rogozhin, Yurii: Small universal Turing machines, TCS 168, 1996.</dd>
+	<dt>[Smi07]</dt>
+		<dd>Smith, Alex: Universality of Wolfram's 2, 3 Turing Machine. (<a href="http://www.wolframscience.com/prizes/tm23/TM23Proof.pdf">Netzversion</a>)</dd>
+	<dt>[Tur36]</dt>
+		<dd>Turing, Alan Mathison: On Computable Numbers, with an application to the Entscheidungsproblem, 1936. (<a href="http://www.abelard.org/turpap2/tp2-ie.asp">Netzversion</a>)</dd>
+</dl>
+
+</div><!-- content -->
+</div><!-- container -->
+</div><!-- main -->
+
+<div id="author"><address>
+	<a href="mailto:fb[at]frank[minus]busse.de">Frank Busse</a> Dresden 2005
+</address></div>
+
+<script src="/js/get.js" type="text/javascript"></script>
+</body></html>
